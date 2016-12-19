@@ -57,6 +57,6 @@ public class Jugador {
                 ", nacimiento=" + nacimiento +
                 ", canastas=" + canastas +
                 ", equipo=" + equipo +
-                '}';
+                '}'+"\n";
     }
 }
