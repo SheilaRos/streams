@@ -18,9 +18,9 @@ public class BaloncestoAPP {
         equipos.add(e1);
         equipos.add(e2);
         equipos.add(e3);
-        List<Jugador> jugadores = Arrays.asList(new Jugador("Pocholo", LocalDate.of(1992, 5, 16), (int) (Math.random() * 8000), e1),
+        List<Jugador> jugadores = Arrays.asList(new Jugador("Pocholo", LocalDate.of(1992, 5, 16), (int) (Math.random() * 80), e1),
                 new Jugador("Fulgencio", LocalDate.of(1993, 7, 1), (int) (Math.random() * 300)+200, e1),
-                new Jugador("Amancio", LocalDate.of(1992, 11, 6), (int) (Math.random() * 8000), e1),
+                new Jugador("Amancio", LocalDate.of(1992, 11, 6), (int) (Math.random() * 80), e1),
                 new Jugador("Anacleto", LocalDate.of(1994, 5, 14), (int) (Math.random() * 300)+200, e2),
                 new Jugador("Anselmo", LocalDate.of(1993, 8, 16), (int) (Math.random() * 8000), e2),
                 new Jugador("Rodolfo", LocalDate.of(1994, 7, 11), (int) (Math.random() * 8000), e2),
@@ -28,15 +28,16 @@ public class BaloncestoAPP {
                 new Jugador("Briselda", LocalDate.of(1991, 3, 1), (int) (Math.random()* 300)+200, e3),
                 new Jugador("Ricarda", LocalDate.of(1994, 9, 10), (int) (Math.random() * 8000), e3)
         );
-       // System.out.println(mas500Canastas(jugadores));
-       /* System.out.println(entre20y500Canastas(jugadores));
-        System.out.println(nombreJugadoresentre20y500Canastas(jugadores));
-        System.out.println(jugadoresOrdenadosNacimiento(jugadores));
-        System.out.println(jugadoresOrdenadosCanastas(jugadores));
-        System.out.println(jugadores5MasCanastas(jugadores));
-        System.out.println(entre20y500CanastasOrdenadosNacimiento(jugadores));*/
-       // System.out.println(jugadorMas4000Canastas(jugadores));
-        System.out.println(jugadorEntre200y500CanastasOrdenadosCanastasONacimiento(jugadores));
+//        System.out.println(mas500Canastas(jugadores));
+//        System.out.println(entre20y500Canastas(jugadores));
+//        System.out.println(nombreJugadoresentre20y500Canastas(jugadores));
+//        System.out.println(jugadoresOrdenadosNacimiento(jugadores));
+//        System.out.println(jugadoresOrdenadosCanastas(jugadores));
+//        System.out.println(jugadores5MasCanastas(jugadores));
+//        System.out.println(entre20y500CanastasOrdenadosNacimiento(jugadores));
+//        System.out.println(jugadorMas4000Canastas(jugadores));
+        System.out.print(sumaCanstas(jugadores));
+//        System.out.println(jugadorEntre200y500CanastasOrdenadosCanastasONacimiento(jugadores));
 
     }
 
@@ -89,19 +90,18 @@ public class BaloncestoAPP {
     public static List<Jugador> jugadorEntre200y500CanastasOrdenadosCanastasONacimiento(List<Jugador> jugadores){
         return jugadores.parallelStream()
                 .filter(jugador -> jugador.getCanastas()<=500 && jugador.getCanastas()>=200)
-                .parallel().sorted(Comparator.comparing(Jugador::getCanastas).thenComparing(Jugador::getNacimiento))
+                .sorted(Comparator.comparing(Jugador::getCanastas).thenComparing(Jugador::getNacimiento))
                 .collect(Collectors.toList());
     }
     public static Map<String,List<Equipo>> equiposAgrupadosPorLocalidad(List<Equipo> equipos){
         return equipos.stream().collect(groupingBy(Equipo::getLocalidad));
     }
     public static Map<String, Integer> sumaCanstasPorEquipo(List<Jugador> jugadores){
-        return ;
+        return jugadores.parallelStream().mapToInt(Jugador::getCanastas).reduce(0, (a,b) -> a+b);
     }
     public static Integer sumaCanstas(List<Jugador> jugadores){
-        return ;
+        return jugadores.parallelStream().mapToInt(Jugador::getCanastas).reduce(0, (a,b) -> a+b);
     }
-
 
 }
 
