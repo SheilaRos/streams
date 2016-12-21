@@ -20,15 +20,15 @@ public class BaloncestoAPP {
         equipos.add(e1);
         equipos.add(e2);
         equipos.add(e3);
-        List<Jugador> jugadores = Arrays.asList(new Jugador("Pocholo", LocalDate.of(1992, 5, 16), (int) (Math.random() * 80), e1),
+        List<Jugador> jugadores = Arrays.asList(new Jugador("Pocholo", LocalDate.of(1992, 5, 16), (int) (Math.random() * 600), e1),
                 new Jugador("Fulgencio", LocalDate.of(1993, 7, 1), (int) (Math.random() * 300)+200, e1),
-                new Jugador("Amancio", LocalDate.of(1992, 11, 6), (int) (Math.random() * 80), e1),
+                new Jugador("Amancio", LocalDate.of(1992, 11, 6), (int) (Math.random() * 600), e1),
                 new Jugador("Anacleto", LocalDate.of(1994, 5, 14), (int) (Math.random() * 300)+200, e2),
-                new Jugador("Anselmo", LocalDate.of(1993, 8, 16), (int) (Math.random() * 8000), e2),
-                new Jugador("Rodolfo", LocalDate.of(1994, 7, 11), (int) (Math.random() * 8000), e2),
-                new Jugador("Casimira", LocalDate.of(1992, 10, 2), (int) (Math.random() * 8000), e3),
+                new Jugador("Anselmo", LocalDate.of(1993, 8, 16), (int) (Math.random() * 600), e2),
+                new Jugador("Rodolfo", LocalDate.of(1994, 7, 11), (int) (Math.random() * 600), e2),
+                new Jugador("Casimira", LocalDate.of(1992, 10, 2), (int) (Math.random() * 600), e3),
                 new Jugador("Briselda", LocalDate.of(1991, 3, 1), (int) (Math.random()* 300)+200, e3),
-                new Jugador("Ricarda", LocalDate.of(1994, 9, 10), (int) (Math.random() * 8000), e3)
+                new Jugador("Ricarda", LocalDate.of(1994, 9, 10), (int) (Math.random() * 600), e3)
         );
 //        System.out.println(mas500Canastas(jugadores));
 //        System.out.println(entre20y500Canastas(jugadores));
