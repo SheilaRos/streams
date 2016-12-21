@@ -234,7 +234,7 @@ public class BaloncestoAPP {
     }
 
     public static boolean jugadorMas50Canastas1Equipo(List<Jugador> jugadores){
-        return jugadores.stream().allMatch(jugador ->  jugador.getCanastas()>50 && jugador.getEquipo().getNombreEquipo().equalsIgnoreCase("Los Michael"));
+        return jugadores.stream().filter(jugador -> jugador.getEquipo().getNombreEquipo().equalsIgnoreCase("Los Michael")).allMatch(jugador ->  jugador.getCanastas()>50);
     }
 
     public static List<Jugador> jugadorEntre200y500CanastasOrdenadosCanastasONacimiento(List<Jugador> jugadores){
