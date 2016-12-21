@@ -99,11 +99,7 @@ public class BaloncestoAPP {
         return equipos.stream().collect(groupingBy(Equipo::getLocalidad));
     }
     public static Map<Equipo, Integer> sumaCanstasPorEquipo(List<Jugador> jugadores){
-
-       // return jugadores.parallelStream().collect(Collectors.groupingBy(Jugador::getEquipo)).entrySet().parallelStream().mapToInt(Jugador::getCanastas).reduce(0, (a,b) -> a+b);
-       // return jugadores.parallelStream().collect(Collectors.groupingBy(Jugador::getEquipo), Collectors.reducing(Jugador::getCanastas));
-       // return jugadores.parallelStream().collect(Collectors.groupingBy(Jugador::getEquipo), Collectors.summingInt(Jugador::getCanastas));
-      //  return jugadores.parallelStream().collect(Collectors.groupingBy(Jugador::getEquipo)).entrySet().parallelStream().collect(Collectors.summingInt(Jugador::getCanastas));
+        return jugadores.parallelStream().collect(Collectors.groupingBy(Jugador::getEquipo, Collectors.summingInt(Jugador::getCanastas)));
 
     }
     public static Integer sumaCanstas(List<Jugador> jugadores){
