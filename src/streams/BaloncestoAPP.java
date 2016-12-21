@@ -2,9 +2,11 @@ package streams;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.toMap;
 
 /**
  * Created by dam on 14/12/16.
@@ -96,8 +98,9 @@ public class BaloncestoAPP {
     public static Map<String,List<Equipo>> equiposAgrupadosPorLocalidad(List<Equipo> equipos){
         return equipos.stream().collect(groupingBy(Equipo::getLocalidad));
     }
-    public static Map<String, Integer> sumaCanstasPorEquipo(List<Jugador> jugadores){
-        return jugadores.parallelStream().mapToInt(Jugador::getCanastas).reduce(0, (a,b) -> a+b);
+    public static Map<Equipo, Integer> sumaCanstasPorEquipo(List<Jugador> jugadores){
+
+        return jugadores.parallelStream().collect(Collectors.groupingBy(Jugador::getEquipo)).entrySet().parallelStream().mapToInt(Jugador::getCanastas).reduce(0, (a,b) -> a+b);
     }
     public static Integer sumaCanstas(List<Jugador> jugadores){
         return jugadores.parallelStream().mapToInt(Jugador::getCanastas).reduce(0, (a,b) -> a+b);
