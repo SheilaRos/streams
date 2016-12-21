@@ -37,108 +37,126 @@ public class BaloncestoAPP {
                 case 1:
                         System.out.println("Todos los jugadores:");
                         System.out.println(jugadores);
+                        System.out.println("");
                         System.out.println("Lista de jugadores con más de 500 canastas:");
                         System.out.println(mas500Canastas(jugadores));
                     break;
                 case 2:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Lista de jugadores que tienen entre 200 y 500 canastas:");
                     System.out.println(entre20y500Canastas(jugadores));
                     break;
                 case 3:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Lista de los nombres de los jugadores que tienen entre 200 y 500 canastas:");
                     System.out.println(nombreJugadoresentre20y500Canastas(jugadores));
                     break;
                 case 4:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Lista de jugadores ordenados por fecha de nacimiento:");
                     System.out.println(jugadoresOrdenadosNacimiento(jugadores));
                     break;
                 case 5:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Lista de jugadores ordenados por número de canástas:");
                     System.out.println(jugadoresOrdenadosCanastas(jugadores));
                     break;
                 case 6:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("5 jugadores con más canastas:");
                     System.out.println(jugadores5MasCanastas(jugadores));
                     break;
                 case 7:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Lista de jugadores que tienen entre 200 y 500 canastas ordenados por fecha de nacimiento de manera descendente:");
                     System.out.println(entre20y500CanastasOrdenadosNacimiento(jugadores));
                     break;
                 case 8:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Lista de jugadores que tienen entre 200 y 500 canastas ordenados por fecha de nacimiento y si coinciden en número por fecha de nacimiento:");
                     System.out.println(jugadorEntre200y500CanastasOrdenadosCanastasONacimiento(jugadores));
                     break;
                 case 9:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Jugador que ha realizado el mínimo de canastas:");
                     System.out.println(jugadorMinCanastas(jugadores));
                     break;
                 case 10:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Jugador que ha realizado el máximo de canastas:");
                     System.out.println(jugadorMaxCanastas(jugadores));
                     break;
                 case 11:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Media de canastas:");
                     System.out.println(avgCanastas(jugadores));
                     break;
                 case 12:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Lista de jugadores que pertenezcan a equipos cuya localidad sea Barcelona:");
                     System.out.println(jugadoresEquipoBCN(jugadores));
                     break;
                 case 13:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Devolver un boolean si hay algun equipo que ha conseguido más de 4000 canastas:");
                     System.out.println(jugadorMas4000Canastas(jugadores));
                     break;
                 case 14:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Devolver un boolean si todos los jugadores han conseguido más de 50 canastas:");
                     System.out.println(jugadoresMas50(jugadores));
                     break;
                 case 15:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Devolver un boolean si todos los jugadores de primer equipo han conseguido más de 50 canastas:");
                     System.out.println(jugadorMas50Canastas1Equipo(jugadores));
                     break;
                 case 16:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Devolver un Map agrupando los equipos que pertenecen a la misma localidad:");
                     System.out.println(equiposAgrupadosPorLocalidad(equipos));
                     break;
                 case 17:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Devolver la suma de canastas de todos los jugadores:");
                     System.out.println(sumaCanstas(jugadores));
                     break;
                 case 18:
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
+                    System.out.println("");
                     System.out.println("Devolver la suma de canastas agrupado por equipos:");
                     System.out.println(sumaCanstasPorEquipo(jugadores));
                     break;
