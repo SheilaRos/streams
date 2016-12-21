@@ -87,7 +87,7 @@ public class BaloncestoAPP {
                     System.out.println("Todos los jugadores:");
                     System.out.println(jugadores);
                     System.out.println("");
-                    System.out.println("Lista de jugadores que tienen entre 200 y 500 canastas ordenados por fecha de nacimiento y si coinciden en número por fecha de nacimiento:");
+                    System.out.println("Lista de jugadores que tienen entre 200 y 500 canastas ordenados por canastas y si coinciden en número por fecha de nacimiento:");
                     System.out.println(jugadorEntre200y500CanastasOrdenadosCanastasONacimiento(jugadores));
                     break;
                 case 9:
