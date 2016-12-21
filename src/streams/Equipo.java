@@ -46,6 +46,6 @@ public class Equipo {
                 "nombreEquipo='" + nombreEquipo + '\'' +
                 ", localidad='" + localidad + '\'' +
                 ", fechaCreacion=" + fechaCreacion +
-                '}';
+                '}'+"\n";
     }
 }
